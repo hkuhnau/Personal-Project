@@ -1,0 +1,180 @@
+/* coloring the spaces in between the grid */
+body{
+    background-color: #D3D3D3;
+}
+/* grid container styles */
+.grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 2fr 1.2fr .8fr;
+    grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "content1 content2 content3"
+    "footer footer footer";
+}
+nav{
+    grid-area: nav;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.60), rgba(0,0,0,0.90), rgba(0,0,0,0.60));
+}
+/* making the navigation flex layout */
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navigation > li, a {
+    text-decoration: none;
+    list-style: none;
+    font-family: 'BIZ UDPMincho', serif;
+    color: #F9F6EE;
+}
+.patty {
+    display: none;
+}
+main {
+    grid-area: main;
+    padding-bottom: 20em;
+    padding-top: 10em;
+    background-image: url("main-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#content1{
+    background: #BBBBBB;
+    grid-area: content1;
+}
+#content1 > img {
+    width: 100px;
+    height: 100px;
+}
+#content2{
+    background: #BBBBBB;
+    grid-area: content2;
+}
+#content3{
+    background: #BBBBBB;
+    grid-area: content3;
+}
+footer{
+    background: #36454F;
+    grid-area: footer;
+}
+/* making the main nested grid */
+.nested{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". transparent .";
+    /* grid-template-areas: "topSection" "myPic" "bio"; */
+}
+/* nested grid within a nested grip ;) */
+#transparent{
+    grid-area: transparent;
+    display: grid;
+    padding-top: .5em;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "myPic" "bio";
+    background-color: rgba(255,255,255,.5);
+}
+/* grid template areas of nested grid in the <main> */
+
+#myPic{
+    grid-area: myPic;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid white;
+    justify-self: center;
+
+}
+/* adding the picture animation */
+#myPic:hover{animation: spin 2s linear infinite;}
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+#bio{
+    grid-area: bio;
+    justify-self: center;
+    align-self: center;
+    font-family: 'BIZ UDPMincho', serif;
+    line-height: 2.5;
+}
+/* creating the typewriter effects */
+.typewriter-container{
+  display: inline-block;
+}
+.type-this{
+    overflow: hidden;
+    border-right: .15em solid black;
+    white-space: nowrap;
+    animation: typing 5.5s steps(50, end) forwards;
+    font-size: 1.6rem;
+    width: 0;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* making the nested-content grid */
+.nested-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card";
+    grid-gap: 0.2rem;
+}
+/* the card in the nested-content */
+.card{
+    grid-area: card;
+    width: 80%;
+    justify-self: center;
+    border: 2px solid gray;
+    box-shadow: 2px 4px 3px 4px;
+    margin: 2.5em;
+}
+.card > img {
+    width: 200px;
+    height: 200px;
+}
+
+/* making it responsive to mobile */
+@media screen and (max-width: 763px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+        "nav"
+        "sidebar"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+    /* for the navigation */
+    .navigation {
+        flex-direction: column;
+    }
+    /* show the patty now that the viewport is small */
+    .patty {
+        display: inline;
+    }
+    /* hide the list items in the navigation */
+    ul[data-visible = "false"]{
+        display: none;
+    }
+    /* when button is clicked and list switched to true by javascript */
+    ul[data-visible = "true"] {
+        display: flex;
+    }
+
+
+
+}
