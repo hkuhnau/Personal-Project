@@ -165,6 +165,7 @@ footer{
     /* show the patty now that the viewport is small */
     .patty {
         display: inline;
+        color: white;
     }
     /* hide the list items in the navigation */
     ul[data-visible = "false"]{
