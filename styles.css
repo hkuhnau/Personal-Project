@@ -166,6 +166,8 @@ footer{
     .patty {
         display: inline;
         color: white;
+        width: 2em;
+        height: 2em;
     }
     /* hide the list items in the navigation */
     ul[data-visible = "false"]{
