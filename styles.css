@@ -188,6 +188,11 @@ footer{
 @media screen and (max-width: 650px) {
     main, .nested, #transparent, #myPic, #bio{
         min-width: 0;
+<<<<<<< Updated upstream
+=======
+        overflow-x: hidden;
+        overflow-y: hidden;
+>>>>>>> Stashed changes
     }
     #bio{visibility: hidden;}
 
