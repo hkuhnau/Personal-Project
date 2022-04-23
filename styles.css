@@ -31,7 +31,7 @@ nav{
     color: #F9F6EE;
 }
 .patty {
-    display: none;
+    visibility: hidden;
 }
 main {
     grid-area: main;
@@ -40,7 +40,6 @@ main {
     background-image: url("main-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 #content1{
     background: #BBBBBB;
@@ -158,24 +157,33 @@ footer{
         "footer";
     }
     /* for the navigation */
-    nav{padding: 2em;}
+    nav{padding: 1em;}
     .navigation {
         flex-direction: column;
     }
+    .btn{
+        padding: .5 1em;
+        margin: 1em;
+    }
     /* show the patty now that the viewport is small */
     .patty {
-        display: inline;
+        visibility: visible;
         color: white;
         width: 2em;
         height: 2em;
     }
     /* hide the list items in the navigation */
     ul[data-visible = "false"]{
-        display: none;
+        visibility: hidden;
     }
     /* when button is clicked and list switched to true by javascript */
     ul[data-visible = "true"] {
-        display: flex;
+        visibility: visible;
     }
 
+}
+
+/* media query for the main section under 650px */
+@media screen and (max-width: 650px) {
+    main{padding: 3em;}
 }
