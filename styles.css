@@ -188,7 +188,8 @@ footer{
 @media screen and (max-width: 650px) {
     main, .nested, #transparent, #myPic, #bio{
         min-width: 0;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
     #bio{visibility: hidden;}
 
