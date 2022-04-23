@@ -155,6 +155,7 @@ footer{
         "content2"
         "content3"
         "footer";
+        height: 100vh;
     }
     /* for the navigation */
     nav{padding: 1em;}
@@ -185,5 +186,12 @@ footer{
 
 /* media query for the main section under 650px */
 @media screen and (max-width: 650px) {
-    main{padding: 3em;}
+    main, .nested, #transparent, #myPic, #bio{
+        min-width: 0;
+    }
+    #bio{visibility: hidden;}
+
+
+
+
 }
