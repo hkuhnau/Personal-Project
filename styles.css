@@ -41,6 +41,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#paragraph{visibility: hidden;}
 #content1{
     background: #BBBBBB;
     grid-area: content1;
@@ -186,17 +187,31 @@ footer{
 
 /* media query for the main section under 650px */
 @media screen and (max-width: 650px) {
-    main, .nested, #transparent, #myPic, #bio{
+    main, .nested, #transparent, #myPic, #bio,.type-this{
         min-width: 0;
-<<<<<<< Updated upstream
-=======
         overflow-x: hidden;
         overflow-y: hidden;
->>>>>>> Stashed changes
     }
     #bio{visibility: hidden;}
 
+    main{position: relative;}
+    #transparent{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        grid-template-areas: "myPic" "paragraph";
+        background-color: transparent;
+    }
 
+    #paragraph{
+        grid-area: paragraph;
+        visibility: visible;
+        justify-self: center;
+        align-self: center;
+        font-family: 'BIZ UDPMincho', serif;
+        border: 2px solid black;
+        padding: 1em;
+    }
 
 
 }
