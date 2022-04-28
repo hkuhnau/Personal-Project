@@ -92,7 +92,6 @@ footer{
     border-radius: 50%;
     border: 2px solid white;
     justify-self: center;
-
 }
 /* adding the picture animation */
 #myPic:hover{animation: spin 2s linear infinite;}

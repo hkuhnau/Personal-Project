@@ -1,0 +1,9 @@
+/* all pages contain original grid layout from index.html.... */
+
+main{background-image: url("about-background.jpg");}
+/* fitting main background for desktop... */
+@media screen and (min-width: 763px) {
+    main{background-size:contain;}
+}
+
+/* creating a new main grid for the about page */
