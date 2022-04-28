@@ -162,7 +162,8 @@ footer{
         height: 100vh;
     }
     /* for the navigation */
-    nav{padding: 1em;}
+    nav[data-visible = "false"]{height: 50px;}
+    nav[data-visible = "true"] {height: 100%;}
     .navigation {
         flex-direction: column;
     }
@@ -180,6 +181,7 @@ footer{
     /* hide the list items in the navigation */
     ul[data-visible = "false"]{
         visibility: hidden;
+        margin: 0;
     }
     /* when button is clicked and list switched to true by javascript */
     ul[data-visible = "true"] {
@@ -206,7 +208,7 @@ footer{
         grid-template-areas: "myPic" "mobile-typewriter-container";
         background-color: transparent;
     }
-
+/* creating typewriter effect for mobile */
     #mobile-typewriter-container{
         grid-area: mobile-typewriter-container;
         visibility: visible;
@@ -216,7 +218,6 @@ footer{
         height: 100%;
         padding-top: 1em;
     }
-    /* creating typewriter effect for mobile */
     #paragraph1{
         overflow: hidden;
         display: block;
