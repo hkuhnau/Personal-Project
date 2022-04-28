@@ -41,7 +41,10 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#paragraph{visibility: hidden;}
+#mobile-typewriter-container{
+    visibility: hidden;
+    height: 0;
+}
 #content1{
     background: #BBBBBB;
     grid-area: content1;
@@ -119,7 +122,7 @@ footer{
   }
   @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 100%;}
 }
 
 /* making the nested-content grid */
@@ -192,6 +195,7 @@ footer{
         overflow-x: hidden;
         overflow-y: hidden;
     }
+    /* hide the original typewriter container */
     #bio{visibility: hidden;}
 
     main{position: relative;}
@@ -199,18 +203,54 @@ footer{
         position: absolute;
         top: 30%;
         left: 30%;
-        grid-template-areas: "myPic" "paragraph";
+        grid-template-areas: "myPic" "mobile-typewriter-container";
         background-color: transparent;
     }
 
-    #paragraph{
-        grid-area: paragraph;
+    #mobile-typewriter-container{
+        grid-area: mobile-typewriter-container;
         visibility: visible;
         justify-self: center;
         align-self: center;
         font-family: 'BIZ UDPMincho', serif;
-        border: 2px solid black;
-        padding: 1em;
+        height: 100%;
+        padding-top: 1em;
+    }
+    /* creating typewriter effect for mobile */
+    #paragraph1{
+        overflow: hidden;
+        display: block;
+        animation: typing 2s steps(50, end) forwards;
+        width: 0;
+        margin: 0;
+      }
+      #paragraph2{
+          overflow: hidden;
+          display: block;
+          animation: typing 2s steps(50, end) forwards;
+          animation-delay: 2s;
+          width: 0;
+          margin: 0;
+        }
+        #paragraph3{
+            overflow: hidden;
+            display: block;
+            animation: typing 2s steps(50, end) forwards;
+            animation-delay: 4s;
+            width: 0;
+            margin: 0;
+          }
+          #paragraph4{
+              overflow: hidden;
+              display: block;
+              animation: typing 2s steps(50, end) forwards;
+              animation-delay: 6s;
+              width: 0;
+              margin: 0;
+            }
+      @keyframes typing {
+        from { width: 0; border-right: .1em solid black;}
+        to { width: 100%; border-right: none;}
     }
 
 
