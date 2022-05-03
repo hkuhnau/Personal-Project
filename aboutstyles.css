@@ -6,4 +6,35 @@ main{background-image: url("about-background.jpg");}
     main{background-size:contain;}
 }
 
-/* creating a new main grid for the about page */
+/* nested-about grid for the main */
+main{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". about .";
+}
+.about-nested{
+    display: grid;
+    grid-area: about;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "h2"
+                        "section";
+    justify-self: center;
+    align-self: center;
+}
+#background-wrapper{background-color: rgba(255,255,255,.5);}
+#h2{
+    grid-area: h2;
+    align-self: end;
+    justify-self: end;
+}
+#section{
+    grid-area: section;
+    align-self: end;
+    justify-self: end;
+}
+/* about-nested grid for when viewport is desktop */
+@media screen and (min-width: 763px) {
+    
+}
