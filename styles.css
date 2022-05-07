@@ -37,7 +37,7 @@ main {
     grid-area: main;
     padding-bottom: 20em;
     padding-top: 10em;
-    background-image: url("main-background.jpg");
+    background-image: url("grand-wood-library.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -81,7 +81,7 @@ footer{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "myPic" "bio";
-    background-color: rgba(255,255,255,.5);
+    background-color: rgba(255,255,255,.75);
 }
 /* grid template areas of nested grid in the <main> */
 
@@ -198,11 +198,16 @@ footer{
     }
     /* hide the original typewriter container */
     #bio{visibility: hidden;}
+    #myPic{visibility: hidden;}
 
-    main{position: relative;}
+    main{
+        background-image: url("main-mobile-background.jpg");
+        min-height:700px;
+        position: relative;
+    }
     #transparent{
         position: absolute;
-        top: 30%;
+        top: 1%;
         left: 30%;
         grid-template-areas: "myPic" "mobile-typewriter-container";
         background-color: transparent;
@@ -215,7 +220,8 @@ footer{
         align-self: center;
         font-family: 'BIZ UDPMincho', serif;
         height: 100%;
-        padding-top: 1em;
+        padding: 1em 2em;
+        background-color: rgba(255,255,255,.5);
     }
     #paragraph1{
         overflow: hidden;

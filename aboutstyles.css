@@ -1,10 +1,5 @@
 /* all pages contain original grid layout from index.html.... */
 
-main{background-image: url("about-background.jpg");}
-/* fitting main background for desktop... */
-@media screen and (min-width: 763px) {
-    main{background-size:contain;}
-}
 
 /* nested-about grid for the main */
 main{
@@ -12,6 +7,7 @@ main{
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 1fr;
     grid-template-areas: ". about .";
+    padding-top: 0;
 }
 .about-nested{
     display: grid;
@@ -20,10 +16,9 @@ main{
     grid-template-rows: 1fr 2fr;
     grid-template-areas: "h2"
                         "section";
-    justify-self: center;
-    align-self: center;
+    float: left;
 }
-#background-wrapper{background-color: rgba(255,255,255,.5);}
+#background-wrapper{background-color: rgba(255, 255, 255, 0.2);}
 #h2{
     grid-area: h2;
     align-self: end;
@@ -34,7 +29,14 @@ main{
     align-self: end;
     justify-self: end;
 }
-/* about-nested grid for when viewport is desktop */
+/* fitting main background for desktop... */
 @media screen and (min-width: 763px) {
-    
+    main{
+        overflow: hidden;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". about";
+    }
+
+
 }
