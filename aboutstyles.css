@@ -1,42 +1,60 @@
 /* all pages contain original grid layout from index.html.... */
 
 
-/* nested-about grid for the main */
+
+/* creating the main nested grid for the about page */
 main{
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: ". about .";
-    padding-top: 0;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". heading ."
+                         ". section-1 ."
+                         ". section-2 ."
+                         ". section-3 .";
+    justify-items: center;
 }
-.about-nested{
-    display: grid;
-    grid-area: about;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
-    grid-template-areas: "h2"
-                        "section";
-    float: left;
+#heading{
+    grid-area: heading;
+    animation: slide .5s forwards;
+    animation-delay: 100ms;
+    position: relative;
+    padding: 1em;
+    color: white;
 }
-#background-wrapper{background-color: rgba(255, 255, 255, 0.2);}
-#h2{
-    grid-area: h2;
-    align-self: end;
-    justify-self: end;
+#section-1{
+    grid-area: section-1;
+    animation: slide .5s forwards;
+    animation-delay: 200ms;
+    position: relative;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
 }
-#section{
-    grid-area: section;
-    align-self: end;
-    justify-self: end;
+#section-2{
+    grid-area: section-2;
+    animation: slide .5s forwards;
+    animation-delay: 300ms;
+    position: relative;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
 }
-/* fitting main background for desktop... */
-@media screen and (min-width: 763px) {
-    main{
-        overflow: hidden;
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr;
-        grid-template-areas: ". about";
-    }
+#section-3{
+    grid-area: section-3;
+    animation: slide .5s forwards;
+    animation-delay: 400ms;
+    position: relative;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 80%;
+}
 
-
+/* animation for the heading */
+@keyframes slide {
+    0%   {left: -250px;}
+    20%  {left: -200px;}
+    40%  {left: -150px;}
+    60% {left: -100px;}
+    80% {left: -50px}
+    100% {left: 0;}
 }
