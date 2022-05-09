@@ -6,12 +6,14 @@
 main{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .2fr 1fr 1fr 1fr;
     grid-template-areas: ". heading ."
                          ". section-1 ."
                          ". section-2 ."
                          ". section-3 .";
     justify-items: center;
+    /*to allow scrolling for the paragraphs on mobile */
+    overflow-y: visible;
 }
 #heading{
     grid-area: heading;
@@ -27,8 +29,8 @@ main{
     animation-delay: 200ms;
     position: relative;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
 }
 #section-2{
     grid-area: section-2;
@@ -36,8 +38,8 @@ main{
     animation-delay: 300ms;
     position: relative;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
 }
 #section-3{
     grid-area: section-3;
@@ -45,8 +47,19 @@ main{
     animation-delay: 400ms;
     position: relative;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+}
+/* styling the paragraphs */
+p{
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+#belowFloat{clear: right;}
+/* styling the images */
+#python{
+    max-width: 100%;
+    float: right;
 }
 
 /* animation for the heading */
@@ -57,4 +70,11 @@ main{
     60% {left: -100px;}
     80% {left: -50px}
     100% {left: 0;}
+}
+
+/* media query for over 650px */
+@media screen and (min-width: 650px) {
+    p{
+        font-size: 1.5em;
+    }
 }
