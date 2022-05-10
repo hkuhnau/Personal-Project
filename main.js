@@ -24,3 +24,22 @@ patty.addEventListener('click', () => {
         }
     }
 });
+
+
+//scroll animations for the home page
+
+const barAnimations = () => {
+
+    const theBar = document.querySelector(".bar1");
+    const theBar2 = document.querySelector(".bar2");
+    const theBar3 = document.querySelector(".bar3");
+    const theBar4 = document.querySelector(".bar4");
+
+
+
+    theBar.style.cssText = 'animation: grow 3s forwards infinite;'
+    theBar2.style.cssText = 'animation: grow 3s forwards infinite;'
+    theBar3.style.cssText = 'animation: grow 3s forwards infinite;'
+    theBar4.style.cssText = 'animation: grow 3s forwards infinite;'
+
+}

@@ -11,7 +11,7 @@ body{
     grid-template-areas:
     "nav nav nav"
     "main main main"
-    "content1 content2 content3"
+    "content1 content1 content1"
     "footer footer footer";
 }
 nav{
@@ -46,20 +46,7 @@ main {
     height: 0;
 }
 #content1{
-    background: #BBBBBB;
     grid-area: content1;
-}
-#content1 > img {
-    width: 100px;
-    height: 100px;
-}
-#content2{
-    background: #BBBBBB;
-    grid-area: content2;
-}
-#content3{
-    background: #BBBBBB;
-    grid-area: content3;
 }
 footer{
     background: #36454F;
@@ -128,11 +115,19 @@ footer{
 .nested-content{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "card";
+    grid-template-rows: .5fr 1fr;
+    grid-template-areas: "experience"
+                        "card";
     grid-gap: 0.2rem;
+    background-color: #28231D;
 }
 /* the card in the nested-content */
+#experience{
+    grid-area: experience;
+    color: white;
+    align-self: center;
+    justify-self: center;
+}
 .card{
     grid-area: card;
     width: 80%;
@@ -141,9 +136,35 @@ footer{
     box-shadow: 2px 4px 3px 4px;
     margin: 2.5em;
 }
-.card > img {
-    width: 200px;
-    height: 200px;
+.bar1{
+    max-width: 80%;
+    min-height: 10%;
+    background-color: red;
+}
+.bar2{
+    max-width: 60%;
+    min-height: 10%;
+    background-color: green;
+}
+.bar3{
+    max-width: 40%;
+    min-height: 10%;
+    background-color: blue;
+}
+.bar4{
+    max-width: 40%;
+    min-height: 10%;
+    background-color: pink;
+}
+
+/* animations for the bars */
+@keyframes grow {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
 }
 
 /* making it responsive to mobile */
@@ -246,14 +267,6 @@ footer{
             width: 0;
             margin: 0;
           }
-          #paragraph4{
-              overflow: hidden;
-              display: block;
-              animation: typing 1s steps(50, end) forwards;
-              animation-delay: 4s;
-              width: 0;
-              margin: 0;
-            }
       @keyframes typing {
         from { width: 0; border-right: .1em solid black;}
         to { width: 100%; border-right: none;}

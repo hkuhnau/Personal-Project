@@ -26,7 +26,7 @@
                     <!-- <li class="patty"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                     </svg></li> -->
-                    <li class="list-items"><a href="#">My GitHub</a></li>
+                    <li class="list-items"><a href="https://github.com/hkuhnau/Personal-Project">My GitHub</a></li>
                     <li class="list-items"><a href="#">JavaScript</a></li>
                     <li class="list-items"><a href="#">Angular Framework</a></li>
                     <li class="list-items"><a href="about.html">About</a></li>
@@ -45,7 +45,6 @@
                             <span><p id="paragraph1">front-</p></span>
                             <span><p id="paragraph2">end </p></span>
                             <span><p id="paragraph3">development </p></span>
-                            <span><p id="paragraph4">website</p></span>
                         </section>
 
 
@@ -66,46 +65,30 @@
             </main>
 
             <div id="content1">
-                <div class="nested-content">
+                <div class="nested-content" onmouseover="barAnimations()">
+                    <h2 id="experience">My Skills</h2>
+
                     <div class="card">
-                        <img src="github.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Github Source Code</h5>
-                            <p class="card-text">View the source code from my Github profile.</p>
-                            <a href="#" class="btn btn-primary">View source code</a>
+                            <div class="bar1">
+                                <p>HTML</p>
+                            </div>
+                            <div class="bar2">
+                                <p>CSS</p>
+                            </div>
+                            <div class="bar3">
+                                <p>JavaScript</p>
+                            </div>
+                            <div class="bar4">
+                                <p>Angular</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div id="content2">
-                <div class="nested-content">
-                    <div class="card">
-                        <img src="javascript.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">JavaScript Functionality</h5>
-                            <p class="card-text">JavaScript is used to add interactive components to a webpage.</p>
-                            <a href="#" class="btn btn-primary">View some JavaScript</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="content3">
-                <div class="nested-content">
-                    <div class="card">
-                        <img src="angular.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Angular Framework</h5>
-                            <p class="card-text">A JavaScript framework used for building single page applications. It uses HTML and TypeScript.</p>
-                            <a href="#" class="btn btn-primary">View my app</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <footer> Footer </footer>
-        </div>
         <!-- Linking the javascript to our html -->
         <script src="main.js"></script>
     </body>
