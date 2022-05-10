@@ -37,10 +37,10 @@ const barAnimations = () => {
 
 
 
-    theBar.style.cssText = 'animation: grow 3s forwards infinite;'
-    theBar2.style.cssText = 'animation: grow 3s forwards infinite;'
-    theBar3.style.cssText = 'animation: grow 3s forwards infinite;'
-    theBar4.style.cssText = 'animation: grow 3s forwards infinite;'
+    theBar.style.cssText = 'animation: grow 3s forwards;'
+    theBar2.style.cssText = 'animation: grow 3s forwards;'
+    theBar3.style.cssText = 'animation: grow 3s forwards;'
+    theBar4.style.cssText = 'animation: grow 3s forwards;'
 
 }
 
