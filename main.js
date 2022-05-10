@@ -43,3 +43,17 @@ const barAnimations = () => {
     theBar4.style.cssText = 'animation: grow 3s forwards infinite;'
 
 }
+
+const stopAnimations = () => {
+    const theBar = document.querySelector(".bar1");
+    const theBar2 = document.querySelector(".bar2");
+    const theBar3 = document.querySelector(".bar3");
+    const theBar4 = document.querySelector(".bar4");
+
+
+
+    theBar.style.cssText = 'animation-play-state: paused;'
+    theBar2.style.cssText = 'animation-play-state: paused;'
+    theBar3.style.cssText = 'animation-play-state: paused;'
+    theBar4.style.cssText = 'animation-play-state: paused;'
+}
