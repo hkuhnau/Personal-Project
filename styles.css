@@ -7,11 +7,12 @@ body{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2fr 1.2fr .8fr;
+    grid-template-rows: 0.2fr 2fr 1.2fr 2fr .8fr;
     grid-template-areas:
     "nav nav nav"
     "main main main"
     "content1 content1 content1"
+    "myeducation myeducation myeducation"
     "footer footer footer";
 }
 nav{
@@ -167,17 +168,50 @@ footer{
     }
 }
 
+/* grid for the myeducation article */
+#myeducation{
+    grid-area: myeducation;
+    background-color: #36454F;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "education"
+                         "arrow"
+                        "unordered-list";
+}
+#education{
+    grid-area: education;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-size: 3em;
+    padding: 1.3em;
+}
+#arrow{
+    grid-area: arrow;
+    align-self: center;
+    justify-self: center;
+    color: white;
+}
+#unordered-list{
+    grid-area: unordered-list;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    list-style-type: none;
+    font-size: 2em;
+}
+
 /* making it responsive to mobile */
 @media screen and (max-width: 763px) {
     .grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.7fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-rows: 0.7fr 2.2fr 1.2fr 1.2fr .8fr;
         grid-template-areas:
         "nav"
         "main"
         "content1"
-        "content2"
-        "content3"
+        "myeducation"
         "footer";
         height: 100vh;
     }

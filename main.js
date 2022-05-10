@@ -57,3 +57,17 @@ const stopAnimations = () => {
     theBar3.style.cssText = 'animation-play-state: paused;'
     theBar4.style.cssText = 'animation-play-state: paused;'
 }
+
+//adding animation to the arrow svg
+
+const arrowAnimation = () => {
+    const theArrow = document.querySelector("#arrow");
+
+    theArrow.style.cssText = 'animation: spin 1s linear;'
+}
+
+const stopArrowAnimation = () => {
+    const theArrow = document.querySelector("#arrow");
+
+    theArrow.style.cssText = 'animation-play-state: paused;'
+}
