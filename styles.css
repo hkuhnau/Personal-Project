@@ -237,6 +237,16 @@ footer{
         "footer";
         height: 100vh;
     }
+    /* changing the grid layout for myeducation */
+    #myeducation{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        grid-template-areas: ". education ."
+                             ". arrow ."
+                            ". unordered-list .";
+    }
+    #gif{visibility: hidden;}
     /* for the navigation */
     nav[data-visible = "false"]{height: 50px;}
     nav[data-visible = "true"] {height: 100%;}
