@@ -1,40 +1,29 @@
-.grid {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 2fr 1.2fr .8fr;
-    grid-template-areas:
-    "nav nav nav"
-    "main main main"
-    "jscontent1 jscontent2 jscontent3"
-    "footer footer footer";
-}
+
 /* for mobile view */
 @media screen and (max-width: 763px) {
-    .grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.7fr 2.2fr 1.2fr 1.2fr 1.2fr .8fr;
-        grid-template-areas:
-        "nav"
-        "main"
-        "jscontent1"
-        "jscontent2"
-        "jscontent3"
-        "footer";
-        height: 100vh;
-    }
-
 /* main section */
     main {
         background-image: none !important;
-        background-color: #565656;
+        background-color: pink;
     }
 }
 
-h1, h2, i{
+h1, h2, i, p{
     color: #E7DFDD;
     text-align: center;
 }
 
-
 /* content boxes */
+#jscontent1{
+    grid-area: content1;
+}
+#jscontent2{
+    grid-area: myeducation;
+}
+#jscontent1, #jscontent2{
+    background-color: #0E0B16;
+    padding: 2em 1em;
+}
+p {
+    font-size: 1.1em;
+}
