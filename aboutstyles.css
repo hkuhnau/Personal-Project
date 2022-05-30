@@ -5,7 +5,8 @@
 /* creating the main nested grid for the about page */
 main{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    background-image: linear-gradient(#be8f3c, #FF8C00);
+    grid-template-columns: .3fr 2fr .3fr;
     grid-template-rows: .2fr 1fr 1fr 1fr;
     grid-template-areas: ". heading ."
                          ". section-1 ."
@@ -20,13 +21,17 @@ main{
     animation: slide .5s forwards;
     animation-delay: 100ms;
     position: relative;
-    padding: 1em;
+    padding: .5em;
     color: white;
+    background-color: black;
+    border: 2px solid white;
+    font-family: monospace;
 }
 #section-1{
     grid-area: section-1;
     animation: slide .5s forwards;
     animation-delay: 200ms;
+    line-height: 1em;
     position: relative;
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.8);
@@ -36,6 +41,7 @@ main{
     grid-area: section-2;
     animation: slide .5s forwards;
     animation-delay: 300ms;
+    line-height: 1em;
     position: relative;
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.8);
@@ -45,6 +51,7 @@ main{
     grid-area: section-3;
     animation: slide .5s forwards;
     animation-delay: 400ms;
+    line-height: 1em;
     position: relative;
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.8);
@@ -53,6 +60,9 @@ main{
 /* styling the paragraphs */
 p{
     font-family: 'Roboto Flex', sans-serif;
+    font-size: 1.4em;
+    line-height: 2em;
+    font-weight: bold;
 
 }
 #belowFloat{clear: right;}
@@ -70,9 +80,4 @@ p{
     60% {left: -100px;}
     80% {left: -50px}
     100% {left: 0;}
-}
-
-/* media query for over 650px */
-@media screen and (min-width: 650px) {
-    
 }

@@ -13,10 +13,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
         <!-- bootstrap link -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>Honor Project - About</title>
+        <title>Honor Project - javascript</title>
         <!-- link to the stylesheet comes last -->
+        <link rel="stylesheet" href="javascriptstyles.css">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="aboutstyles.css">
     </head>
     <body>
 
@@ -40,43 +40,43 @@
             </nav>
 
             <main>
-                <h1 id="heading">My journey to coding...</h1>
-                <section id="section-1">
-                    <p>
-                          I began coding by taking a free online course in Python 3.
-                        Python is a general purpose language, meaning it is useful for a wide-variety of applications.
-                        It can be used for web design, software development, data science, or even automation.
-                        Although it has front-end uses, Python is primarily a backend programming language.
-                        I found it a great introduction to understanding the basic concepts of programming.
-                    </p>
-
-                </section>
-                <section id="section-2">
-                    <p>
-                          After my online courses, I decided to get serious about coding and went to school for a
-                        degree in front-end development. Here I was introduced to HTML, CSS, and JavaScript, some of the
-                        primary languages I focus on.
-                    </p>
-                </section>
-                <section id="section-3">
-                    <p>
-                          Being proficient in HTML, CSS, and JavaScript are important aspects of being a stand-out front-end
-                        developer. Utilizing JavaScript frameworks like React and Angular are also good skills to have under
-                        your belt; these powerful frameworks add functionality to your apps. Debugging, problem solving, and using
-                        good HTML semantics will help aid in any interface you manipulate.
-                    </p>
-                </section>
+                <h1>JavaScript</h1>
+                <h2><i>programming language for the web</i></h2>
             </main>
 
-            <div id="content1">
+            <div id="jscontent1">
+                <h2>Type your Name</h2>
+                <p>Output your name to the web console, using the syntax:
+                    console.log("");
+                </p>
+                <label for="textOne">Check your Answer</label>
+                <br>
+                <input type="text" name="textOne" value="" id="textOne">
+                <input type="submit" value="go!">
+            </div>
+
+            <div id="jscontent2">
+                <h2>Make a Variable</h2>
+                <p>Create a variable called myAge, and set it equal to your age,
+                    using the syntax:
+                    let variableName = value;
+                </p>
+                <label for="textTwo">Check your Answer</label>
+                <br>
+                <input type="text" name="textTwo" value="">
+                <input type="submit" value="go!">
 
             </div>
 
-            <div id="content2">
-
-            </div>
-
-            <div id="content3">
+            <div id="jscontent3">
+                <h2>Types of Variables</h2>
+                <p>What is the data type of favoriteColor = "red";
+                    Is it a number, string, or boolean?
+                </p>
+                <label for="textThree">Check your Answer</label>
+                <br>
+                <input type="text" name="textThree" value="">
+                <input type="submit" value="go!">
 
             </div>
 
@@ -84,5 +84,6 @@
         </div>
         <!-- Linking the javascript to our html -->
         <script src="main.js"></script>
+        <script src="javascript.js"></script>
     </body>
 </html>
