@@ -18,7 +18,7 @@ h1, h2, i, p, label{
 
 
 
-/* content boxes */
+/* content boxes and inputs & labels */
 #jscontent1{
     grid-area: content1;
     border-bottom: 5px solid white;
@@ -34,10 +34,14 @@ p {
     font-size: 1.5em;
 }
 input, label{
-    margin-left: 5em;
+    margin-left: 3em;
     padding: .5em 1em;
 }
 input{margin-top: 1em;}
 
+/*svg image and help text */
+svg{
+    cursor: pointer;
+}
 
 /*correct and incorrect messages */
