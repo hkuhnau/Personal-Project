@@ -4,27 +4,40 @@
 /* main section */
     main {
         background-image: none !important;
-        background-color: pink;
+        background-color: gold;
     }
+    h1{color: black;}
 }
+
+
 
 h1, h2, i, p, label{
     color: #E7DFDD;
     text-align: center;
 }
 
+
+
 /* content boxes */
 #jscontent1{
     grid-area: content1;
+    border-bottom: 5px solid white;
 }
 #jscontent2{
     grid-area: myeducation;
 }
 #jscontent1, #jscontent2{
     background-color: #0E0B16;
-    padding: 2em 1em;
+    padding: 3em;
 }
 p {
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
-input, label{margin-left: 5em;}
+input, label{
+    margin-left: 5em;
+    padding: .5em 1em;
+}
+input{margin-top: 1em;}
+
+
+/*correct and incorrect messages */
