@@ -8,6 +8,10 @@
     }
     h1{color: black;}
 }
+/* Fixing the overflow scrolling in mobile */
+@media screen and (max-width: 650px) {
+    .transparent{padding: 1em;}
+}
 
 
 
