@@ -17,6 +17,36 @@ h1, h2, i, p, label{
 }
 
 
+/*creating the main grid */
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". transparent .";
+}
+/*switching for mobile*/
+
+/*transparent is nested within main */
+.transparent{
+    grid-area: transparent;
+    display: grid;
+    padding: 5em;
+    margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "js" "i";
+    background-color: rgba(255,255,255,.75);
+}
+/*headings nested within transparent */
+#js{
+    grid-area: js;
+    color: black;
+}
+#i{
+    grid-area: i;
+}
+i{color: black;}
+
+
 
 /* content boxes and inputs & labels */
 #jscontent1{
