@@ -81,6 +81,6 @@ svg{
 }
 
 /*correct and incorrect messages */
-#helpSection{
+#helpSection, #helpSection2{
     color: white;
 }
