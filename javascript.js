@@ -1,3 +1,4 @@
+//checking labelOne for correct/incorrect input and giving the message
 const getTextOne = () => {
     let textOne = document.getElementById("textOne").value;
     let labelOne = document.querySelector("label");
@@ -24,8 +25,7 @@ const getTextOne = () => {
             labelOne.innerHTML = "Check your Answer";
         }
     }
-
-    // return labelOne.innerHTML = "Check your Answer";
+//checking labelTwo for correct/incorrect input and giving the message
 }
 
 const getTextTwo = () => {
@@ -53,3 +53,35 @@ const getTextTwo = () => {
     }
 
 }
+// const helpOne = () => {
+//     //define the helpsection
+//     const helpSection = document.getElementById("helpSection");
+//     //create the text node and append to the element
+//     let node = document.createTextNode("Have you checked your spelling?");
+//     helpSection.appendChild(node);
+//     document.body.appendChild(helpSection);
+//     //applying styles to the section
+//     helpSection.style.color = "white";
+// }
+
+//define the svg
+const svg = document.getElementById("svg1");
+//define the helpsection
+const helpSection = document.getElementById("helpSection");
+//define the array of answers for the helpSection
+const array = ["Have you checked your spelling?", "Did you forget the semicolon?", "Do you have quotations around your name?"];
+//loop over the array every time the button is clicked and add to the helpSection
+let i = 0;
+
+function oneByOne(e) {
+  for (i; i <= 3; i++) {
+    console.log(i);
+    if (i == 3) {
+        i = 0;
+    }
+    return [helpSection.innerHTML = array[i++],setTimeout(() => {
+        helpSection.innerHTML = "";
+    }, 2000)]; 
+  }
+}
+svg.onclick = oneByOne;
